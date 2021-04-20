@@ -28,6 +28,7 @@ export function createStore(reducer) {
       // traverse
       for (const [root, component] of roots) {
          // khá hay là những element của Map là array
+         // component này có chứa state nha, vì thằng connect trả về merge mà hihi ^~^
          const output = component();
          root.innerHTML = output;
       }
